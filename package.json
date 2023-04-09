@@ -1,6 +1,6 @@
 {
   "name": "dmails",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dmails is a fork of mail-listener2, a node.js module for listening to incoming emails over IMAP.",
   "dependencies": {
     "async": "^3.2.4",
