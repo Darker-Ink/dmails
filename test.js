@@ -1,6 +1,6 @@
-const { MailListener } = require('./dist/index.js');
+const { MailServerListener } = require('./dist/index.js');
 
-const mailListener = new MailListener({
+const mailListener = new MailServerListener({
   username: 'email@example.com', // The Username (email) of the account you want to connect to (Required)
   password: 'xxx', // The Password of the account you want to connect to (Required)
   host: 'mail.example.com', // The Hostname of the IMAP-Server
