@@ -1,6 +1,23 @@
-const { MailListener } = require('./dist/index.js');
+# Overview
 
-const mailListener = new MailListener({
+DMails library for node.js. Get notification when new email arrived to inbox or when message metadata (e.g. flags) changes externally. Uses IMAP protocol.
+
+We are using these libraries: [node-imap](https://github.com/mscdex/node-imap), [mailparser](https://github.com/andris9/mailparser).
+
+
+## Use
+
+Install
+
+`npm install dmails`
+
+JavaScript Code:
+
+
+```javascript
+const { MailServerListener } = require('dmails');
+
+const mailListener = new MailServerListener({
   username: 'email@example.com', // The Username (email) of the account you want to connect to (Required)
   password: 'xxx', // The Password of the account you want to connect to (Required)
   host: 'mail.example.com', // The Hostname of the IMAP-Server
@@ -41,3 +58,10 @@ mailListener.on("mail", (mail, seq, attributes) => {
 });
 
 mailListener.start();
+```
+
+That's easy!
+
+## Credits
+
+This project is a fork of [mail-listener2](https://github.com/chirag04/mail-listener2/) by [chirag04](https://github.com/chirag04).
